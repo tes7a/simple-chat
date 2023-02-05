@@ -1,0 +1,7 @@
+@import "/src/common/mixins/mixins.scss";
+
+.not_found {
+    text-align: center;
+
+    @include mainTextStyle('Roboto', 900, 35px, 100px, -0.02em, #0B121B)
+}

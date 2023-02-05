@@ -1,0 +1,23 @@
+@mixin mainTextStyle($ff,$fw,$fsi,$lh,$ls,$c) {
+    font-family: $ff;
+    font-style: normal;
+    font-weight: $fw;
+    font-size: $fsi;
+    line-height: $lh;
+  
+    letter-spacing: $ls;
+  
+    color: $c;
+}
+
+@mixin secondTextStyle($ff,$fw,$fsi,$lh,$ls,$c) {
+    font-family: $ff;
+    font-style: normal;
+    font-weight: $fw;
+    font-size: $fsi;
+    line-height: $lh;
+  
+    letter-spacing: $ls;
+  
+    color: $c;
+}

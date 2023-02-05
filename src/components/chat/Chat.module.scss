@@ -1,0 +1,103 @@
+@import "/src/common/mixins/mixins.scss";
+@import "/src/common/mixins/variables.scss";
+
+.wrapper {
+    height: 100vh;
+    background-color: $backgroundColor;
+
+    .wrapper__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 16px 12px 20px;
+
+        border-bottom: 1px solid #E7EFFF;
+
+        img {
+            padding: 4px;
+        }
+
+        .wrapper__header_user {
+            display: flex;
+            h3 {
+                padding: 10px 10px;
+                @include mainTextStyle('Roboto', 500, 16px, 24px, 0.15px, #0B121B);
+            }
+        }
+    }
+
+    .wrapper__banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .wrapper__banner_info {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            width: 95%;
+            height: 20px;
+            margin-top: 18px;
+            padding: 2px 8px;
+
+            border-radius: 4px;
+            background-color: $headerColor;
+
+            span {
+                @include mainTextStyle('Roboto', 500, 11px, 16px, 0.5px, #0B121B);
+            }
+
+            .wrapper__banner_img {
+                margin-left: 12px;
+                color: #0B121B;
+
+                font-size: 8px;
+            }
+        }
+    }
+
+    .wrapper__input_block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .wrapper__clip_img {
+            margin-right: 8px;
+            font-size: 22px;
+            color: #202F3E;
+        }
+
+        .wrapper__input_message {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            position: relative;
+            padding: 10px 8px 10px 16px;
+            gap: 8px;
+    
+            width: 592px;
+            height: 44px;
+    
+            background: #F7F9FF;
+            border-radius: 4px;
+
+            &::before {
+                content: "";
+                position: absolute;
+            }
+        }
+        
+        .wrapper__mic_img {
+            margin-left: 8px;
+            font-size: 22px;
+            color: #202F3E;
+        }
+    }
+
+    .wrapper__chat_message {
+        width: 100%;
+    }
+    .wrapper__chat_avatar {
+        margin: 0px 8px;
+    }
+}

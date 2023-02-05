@@ -1,0 +1,69 @@
+@import "/src/common/mixins/mixins.scss";
+@import "/src/common/mixins/variables.scss";
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    background-color: $backgroundColor;
+
+    .wrapper__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 556px;
+        height: 400px;
+
+        --b: 5px;
+        --s: 30px;
+        --c1: #3978FC;
+        --c2: #C4D7FE;
+        
+        aspect-ratio: 1;
+        position: relative;
+        box-shadow: 0 30px 93px rgb(0 0 0 / 35%), 0 10px 70px rgb(0 0 0 / 35%);
+
+        &::before {
+            content:"";
+            position: absolute;
+            inset: 0;
+            padding: var(--b);
+            background: 
+              repeating-conic-gradient(var(--c1) 0 25%,var(--c2) 0 50%) 
+              0 0/var(--s) var(--s) round;
+            -webkit-mask:
+              linear-gradient(#000 0 0) content-box,
+              linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+            pointer-events: none;
+          }
+
+          @media screen and (max-width: 560px){
+            width: 100%;
+          }
+        h1 {
+            padding: 5px 9px;
+            @include mainTextStyle('Roboto', 700, 33px, 28px, -0.02em, #0B121B)
+        }
+
+        .wrapper__data_block {
+            padding: 5px 5px;
+            margin-bottom: 6px;
+            text-align: center;
+            h4 {
+                padding: 3px 3px;
+                @include mainTextStyle('Roboto', 400, 20px, 28px, -0.02em, #0B121B)
+            }
+
+            span {
+                padding: 3px 3px;
+                @include mainTextStyle('Roboto', 400, 20px, 28px, -0.02em, #0B121B)
+            }
+        }       
+    }
+}
