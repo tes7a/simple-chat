@@ -6,7 +6,7 @@ import { type ResponseLoginType, type ItemMessage } from '../../../api/api-quick
 import { getCorrectlyDay, getCorrectlyTime } from './helpers/date';
 
 export const ChatWindow: React.FC<ChatWindowType> = React.memo(({
-  userId, messages, users, setQuantity,
+  userId, messages, setQuantity,
 }) => {
   const fetchMoreData = () => {
     setTimeout(() => {

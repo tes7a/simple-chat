@@ -71,9 +71,9 @@ function* getListMessages(action: ReturnType<typeof getListMessagesAC>) {
   try {
     const listMessages: ResponseListMessage = yield call(dialogQuickBlox.getListMessages, params);
     yield put(setListMessagesAC(listMessages));
+    const res: TakeMessageRealTimeType = yield call(dialogQuickBlox.getMessageRealTime);
+    yield put(setMessageRealTimeAC(res));
   } catch (error) {
-    console.log(error);
-
     const err = error as ErrorType;
     alert(err.detail[0]);
   }
