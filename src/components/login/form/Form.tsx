@@ -20,7 +20,7 @@ export const Form = React.memo(() => {
       }
     },
     initialValues: {
-      login: 'jj8517614',
+      login: 'jh2345',
       password: 'Qwerty12345_',
     },
     onSubmit(values: FormValuesType) {
