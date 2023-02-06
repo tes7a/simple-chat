@@ -6,8 +6,13 @@ import { type ResponseLoginType, type ItemMessage } from '../../../api/api-quick
 import { getCorrectlyDay, getCorrectlyTime } from './helpers/date';
 
 export const ChatWindow: React.FC<ChatWindowType> = React.memo(({
-  userId, messages, setQuantity,
+  userId, messages, setQuantity, users,
 }) => {
+  const getName = (id: number) => {
+    const user = users?.find((u) => (u.user.id === id));
+    return user?.user.full_name;
+  };
+
   const fetchMoreData = () => {
     setTimeout(() => {
       // @ts-expect-error
@@ -48,7 +53,7 @@ export const ChatWindow: React.FC<ChatWindowType> = React.memo(({
                 : s.wrapper__chat_message_block}
             >
               <div className={s.wrapper__chat_message_wrapper}>
-                {userId !== m.sender_id && <h4>Name</h4>}
+                {userId !== m.sender_id && <h4>{getName(m.sender_id)}</h4>}
                 <div className={s.wrapper__chat_message}>
                   {userId === m.sender_id || <img src={avatar} alt="avatar" className={s.wrapper__chat_avatar} />}
                   {userId === m.sender_id && (
@@ -83,6 +88,6 @@ export const ChatWindow: React.FC<ChatWindowType> = React.memo(({
 interface ChatWindowType {
   userId: number | undefined
   messages: ItemMessage[] | undefined
-  users: ResponseLoginType[] | undefined
+  users: Array<{ user: ResponseLoginType }> | undefined
   setQuantity: (value: number) => void
 }

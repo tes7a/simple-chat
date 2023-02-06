@@ -9,6 +9,7 @@ import {
   type ResponseDialogsTypes,
   type ResponseLoginType,
   type ResponseListMessage,
+  type UsersListType,
 } from '../../api';
 import { getListMessagesAC, sendMessageAC } from '../../bll/reducers/chat-reducers';
 import { type AppRootStateType } from '../../store';
@@ -28,7 +29,7 @@ export const Chat = React.memo(() => {
   ResponseLoginType | null>((state) => state.auth.user);
 
   const usersList = useSelector<AppRootStateType,
-  ResponseLoginType[] | undefined>((state) => state.auth.usersList?.items);
+  UsersListType | null>((state) => state.auth.usersList);
 
   const message = useSelector<AppRootStateType,
   TakeMessageRealTimeType | null>((state) => state.chat.message);
@@ -76,7 +77,7 @@ export const Chat = React.memo(() => {
       <ChatWindow
         userId={user?.id}
         messages={messagesList?.items}
-        users={usersList}
+        users={usersList?.items}
         setQuantity={setQuantity}
       />
       <div className={s.wrapper__input_block}>

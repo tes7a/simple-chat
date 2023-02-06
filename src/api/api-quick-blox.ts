@@ -190,7 +190,9 @@ export interface ResponseListMessage {
 
 export interface UsersListType {
   current_page: number
-  items: ResponseLoginType[]
+  items: Array<{
+    user: ResponseLoginType
+  }>
   per_page: number
   total_entries: number
 }

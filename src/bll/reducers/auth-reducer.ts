@@ -71,12 +71,12 @@ function* createSession(action: ReturnType<typeof sessionCreateAC>) {
     ResponseCreateSessionType = yield call(authQuickBLox.createSession, login, password);
     const userData:
     ResponseLoginType = yield call(authQuickBLox.login, login, password);
-    const usersList: UsersListType = yield call(authQuickBLox.getListUsers, params);
+    const resUsersList: UsersListType = yield call(authQuickBLox.getListUsers, params);
 
     yield joinToChat(sessionData.user_id, sessionData.token);
 
     yield put(getSessionDataAC(sessionData));
-    yield put(setUsersListAC(usersList));
+    yield put(setUsersListAC(resUsersList));
     yield put(getUserDataAC(userData));
     yield put(setAuthStatusAC(true));
   } catch (error) {
