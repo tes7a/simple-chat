@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/simple-chat/static/css/main.cd2685e3.css",
-    "main.js": "/simple-chat/static/js/main.0deda5e2.js",
+    "main.js": "/simple-chat/static/js/main.0aa40171.js",
     "static/js/787.28cb0dcd.chunk.js": "/simple-chat/static/js/787.28cb0dcd.chunk.js",
     "static/media/icomoon.svg?2zz8ey": "/simple-chat/static/media/icomoon.8b72f739861b7261ab96.svg",
     "static/media/icomoon.eot?2zz8ey": "/simple-chat/static/media/icomoon.f5f4efbbec20a1804d86.eot",
@@ -11,11 +11,11 @@
     "static/media/Vector.svg": "/simple-chat/static/media/Vector.c65ab5702b5251136ba6708125fc9fcb.svg",
     "static/media/Ellipse.svg": "/simple-chat/static/media/Ellipse.c2c4e397df0112e3b63aa7c7efb0bce2.svg",
     "main.cd2685e3.css.map": "/simple-chat/static/css/main.cd2685e3.css.map",
-    "main.0deda5e2.js.map": "/simple-chat/static/js/main.0deda5e2.js.map",
+    "main.0aa40171.js.map": "/simple-chat/static/js/main.0aa40171.js.map",
     "787.28cb0dcd.chunk.js.map": "/simple-chat/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2685e3.css",
-    "static/js/main.0deda5e2.js"
+    "static/js/main.0aa40171.js"
   ]
 }
